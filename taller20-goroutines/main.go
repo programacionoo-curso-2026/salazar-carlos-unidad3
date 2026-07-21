@@ -9,9 +9,7 @@ import (
 func main() {
 
 	for i := 0; i < 10; i++ {
-
-		go ShowGoroutines(1)
-
+		go ShowGoroutines(i)
 	}
 
 	time.Sleep(time.Minute)
