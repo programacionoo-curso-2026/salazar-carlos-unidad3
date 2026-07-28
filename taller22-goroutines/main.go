@@ -15,6 +15,7 @@ func main() {
 	orders := generateOrders(20)
 	processOrders(orders)
 	updateOrderStatuses(orders)
+	reportOrderStatus(orders)
 	fmt.Printf("Numero de Ordenes: %d\n", len(orders))
 	fmt.Print("Todas las operaciones completadas. Finalizando\n")
 }
@@ -46,5 +47,17 @@ func updateOrderStatuses(orders []*Order) {
 		order.Status = status
 		fmt.Printf("Actualizando orden %d con estado: %s\n",
 			order.ID, status)
+	}
+}
+
+func reportOrderStatus(orders []*Order) {
+	for i := 0; i < 5; i++ {
+		time.Sleep(1 * time.Second)
+		fmt.Printf("\n--- Reporte Estado de las Ordenes ---\n")
+		for _, order := range orders {
+			fmt.Printf("Orden %d %s\n",
+				order.ID, order.Status)
+		}
+		fmt.Printf("---------------------------------------\n")
 	}
 }
