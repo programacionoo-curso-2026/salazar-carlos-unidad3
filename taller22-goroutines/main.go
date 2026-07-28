@@ -12,12 +12,12 @@ type Order struct {
 }
 
 func main() {
+
 	orders := generateOrders(20)
-	processOrders(orders)
-	updateOrderStatuses(orders)
-	reportOrderStatus(orders)
-	fmt.Printf("Numero de Ordenes: %d\n", len(orders))
-	fmt.Print("Todas las operaciones completadas. Finalizando\n")
+	go processOrders(orders)
+	go updateOrderStatuses(orders)
+	go reportOrderStatus(orders)
+	fmt.Print("Todas las operaciones completadas. Saliendo")
 }
 
 func generateOrders(count int) []*Order {

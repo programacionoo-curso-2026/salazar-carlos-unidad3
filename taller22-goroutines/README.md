@@ -232,3 +232,6 @@ Todas las operaciones completadas. Finalizando
 
 ## Iteracion 5
 Ya esta en las pruebas anteriores
+
+## Iteracion 6
+Todas las operaciones completadas. Saliendo
