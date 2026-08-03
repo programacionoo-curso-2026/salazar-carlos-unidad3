@@ -38,6 +38,26 @@ func main_n() {
 
   wg.Wait()
 
+  func updateOrderStatus(order *Order) {
+    order.mu.Lock()
+    time.Sleep(time.Duration(rand.Intn(500)) * time.Millisecond)
+    status := []string{
+        "Procesando", "Despachando", "Entregado",
+    }[rand.Intn(3)]
+    order.Status = status
+    fmt.Printf("Actualizando orden %d con estado: %s\n",
+        order.ID, status)
+    order.mu.Unlock()
+
+    updateMutex.Lock()
+    defer updateMutex.Unlock()
+
+    currentUpdates := totalUpdates
+    time.Sleep(5 * time.Millisecond)
+    totalUpdates = currentUpdates + 1
+
+}
+
   fmt.Print("Todas las operaciones completadas. Saliendo\n")
   fmt.Printf("Total Actualizaciones %d\n", totalUpdates)
 }
