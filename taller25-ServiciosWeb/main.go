@@ -32,6 +32,27 @@ var preguntas = []Pregunta{
 		OpcionC:  ":=",
 		Solucion: "A",
 	},
+	{
+		Pregunta: `numeros &blank []int{1, 2, 3}`,
+		OpcionA:  "var",
+		OpcionB:  ":=",
+		OpcionC:  "=",
+		Solucion: "B",
+	},
+	{
+		Pregunta: `type Persona &blank { Nombre string }`,
+		OpcionA:  "interface",
+		OpcionB:  "struct",
+		OpcionC:  "class",
+		Solucion: "B",
+	},
+	{
+		Pregunta: `func sumar(a int, b int) &blank { return a + b }`,
+		OpcionA:  "int",
+		OpcionB:  "void",
+		OpcionC:  "result",
+		Solucion: "A",
+	},
 }
 
 const pageTemplate = `<!DOCTYPE html>
