@@ -1,0 +1,12 @@
+{
+    "genero_id":  "GEN001",
+    "clasificacion":  "PG-13",
+    "proveedor_id":  "PROV001",
+    "duracion":  138,
+    "categoria_id":  "CAT001",
+    "url_reproduccion":  "https://streaminggo.example.com/video/VID003",
+    "anio":  2003,
+    "video_id":  "VID003",
+    "titulo":  "Matrix Reloaded",
+    "sinopsis":  "Contenido actualizado."
+}

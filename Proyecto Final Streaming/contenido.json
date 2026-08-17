@@ -1,0 +1,13 @@
+{
+    "proveedor_id":  "PROV001",
+    "genero_id":  "GEN001",
+    "clasificacion":  "R",
+    "contenido_id":  "CONT003",
+    "duracion":  136,
+    "categoria_id":  "CAT001",
+    "url_reproduccion":  "https://streaminggo.example.com/video/VID003",
+    "anio":  1999,
+    "video_id":  "VID003",
+    "titulo":  "Matrix",
+    "sinopsis":  "Una realidad simulada pone a prueba a la humanidad."
+}
